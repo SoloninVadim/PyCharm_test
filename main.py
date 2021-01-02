@@ -1,14 +1,14 @@
-date = '28.11.1992'
-d, m, y = date.split('.')
-print(d, m, y)
+import random
 
-days = {
-    '28': 'двадцать восьмое',
-}
+number = random.randint(1, 100)
+print(number)
+user_number = None
 
-months = {
-    '11': 'ноября'
-}
+while number != user_number:
+    user_number = int(input('Введите число: '))
+    if number < user_number:
+        print('Ваше число больше загаданного')
+    elif number > user_number:
+        print('Ваше число меньше загаданного')
 
-result = f'{days[d]} {months[m]} {y} года'
-print(result)
+print('Победа')
